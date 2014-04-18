@@ -29,8 +29,8 @@ ActiveAdmin.register DataFeed do
 
  
   collection_action :import_data_feeds do
-    #Merchant.all.each do |merchant|
-    [ Merchant.first ].each do |merchant|
+    Merchant.all.each do |merchant|
+    #[ Merchant.first ].each do |merchant|
       Feedster.new().get_data_feeds(merchant.merchant_id).map do |data_feed| 
 
         feed = DataFeed.find_or_initialize_by(sku: data_feed['SKU'], price: data_feed['Price'])
