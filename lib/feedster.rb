@@ -5,8 +5,7 @@ require 'openssl'
 require 'json'
 
 class Feedster
-  def initialize(product, provider='CF')
-    @product  = product
+  def initialize(provider='CF')
     @provider = provider
   end
 
@@ -19,7 +18,7 @@ class Feedster
     http = initialize_http(uri)
 
     request = Net::HTTP::Get.new(uri.request_uri)
-    http.request(request)
+    JSON( http.request(request).body )
   end
 
   #
@@ -30,7 +29,7 @@ class Feedster
     http = initialize_http(uri)
 
     request = Net::HTTP::Get.new(uri.request_uri)
-    http.request(request)
+    JSON( http.request(request).body )['Items'] 
   end
 
   #
