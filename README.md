@@ -3,7 +3,7 @@ Merchants
 #
 # This is what we receive from CommisionFactory
 #
-*{
+* {
 *  "Id":388,
 *  "DateCreated":"2011-07-18T16:44:42.663",
 *  "DateModified":"2014-04-17T21:46:41.68",
@@ -14,17 +14,17 @@ Merchants
 *  "Type":"Product Catalogue",
 *  "ItemsCount":3237,
 *  "Items":null},
-*}
+* }
 
 #
 # This part we will store in DB
 #
-*MerchantId        => merchant_id:integer 
-*DateCreated       => date_created:date 
-*DateModified      => date_modified:date 
-*MerchantName      => name:string 
-*MerchantAvatarUrl => avatar_path:text 
-*ItemsCount        => items_count:integer
+* MerchantId        => merchant_id:integer 
+* DateCreated       => date_created:date 
+* DateModified      => date_modified:date 
+* MerchantName      => name:string 
+* MerchantAvatarUrl => avatar_path:text 
+* ItemsCount        => items_count:integer
 
 
 DataFeeds
@@ -32,7 +32,7 @@ DataFeeds
 #
 # This is what we receive from CommisionFactory
 #
-*{
+* {
 *  "Id": 1,
 *  "DateCreated": "2000-01-01T00:00:00.000",
 *  "DateModified": "2000-01-01T00:00:00.000",
@@ -73,26 +73,26 @@ DataFeeds
 *  "Custom4": null,
 *  "TrackingUrl": "https://track.commissionfactory.com.au/p/0/1/",
 *  "TrackingCode": "<a href=\"https://track.commissionfactory.com.au/p/0/1/\" rel=\"noindex,nofollow\">100 Piece Puzzle</a>"
-*}
+* }
 
 #
 # This is what we gonna store
 #
-*Id             => product_id:integer
-*DateCreated    => date_created:date
-*DateModified   => date_modified:date
-*SKU            => sku:string
-*Name           => name:string
-*Category       => category:string
-*Description    => description:text
-*TargetUrl      => target_url:text
-*ImageUrl       => image_url:text
-*Image200Url    => avatar_url:text
-*Price          => price:integer
-*Brand          => barnd:string
-*Colour         => colour:string
-*Currency       => currency:string
-*Gender         => gender:string
+* Id             => product_id:integer
+* DateCreated    => date_created:date
+* DateModified   => date_modified:date
+* SKU            => sku:string
+* Name           => name:string
+* Category       => category:string
+* Description    => description:text
+* TargetUrl      => target_url:text
+* ImageUrl       => image_url:text
+* Image200Url    => avatar_url:text
+* Price          => price:integer
+* Brand          => barnd:string
+* Colour         => colour:string
+* Currency       => currency:string
+* Gender         => gender:string
 
 
 Database import
