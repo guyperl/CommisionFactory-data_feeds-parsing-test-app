@@ -36,6 +36,7 @@ ActiveAdmin.register DataFeed do
         feed = DataFeed.find_or_initialize_by(sku: data_feed['SKU'], price: data_feed['Price'])
 
         feed.update({
+          :merchant_id   => merchant.id,
           :product_id    => data_feed['Id'],
           :date_created  => data_feed['DateCreated'],
           :date_modified => data_feed['DateModified'],

@@ -1,54 +1,24 @@
-%p#notice= notice
+.container.item_name
+  .row
+    .col-xs-12
+      %p.text-center= "#{@data_feed.barnd}. #{@data_feed.name}"
+%br
+%br
+.container
 
-%p
-  %b Merchant:
-  = @data_feed.merchant_id
-%p
-  %b Product:
-  = @data_feed.product_id
-%p
-  %b Date created:
-  = @data_feed.date_created
-%p
-  %b Date modified:
-  = @data_feed.date_modified
-%p
-  %b Sku:
-  = @data_feed.sku
-%p
-  %b Name:
-  = @data_feed.name
-%p
-  %b Category:
-  = @data_feed.category
-%p
-  %b Description:
-  = @data_feed.description
-%p
-  %b Target url:
-  = @data_feed.target_url
-%p
-  %b Image url:
-  = @data_feed.image_url
-%p
-  %b Avatar url:
-  = @data_feed.avatar_url
-%p
-  %b Price:
-  = @data_feed.price
-%p
-  %b Barnd:
-  = @data_feed.barnd
-%p
-  %b Colour:
-  = @data_feed.colour
-%p
-  %b Currency:
-  = @data_feed.currency
-%p
-  %b Gender:
-  = @data_feed.gender
+  .col-xs-6
+    = image_tag @data_feed.image_url
+  .col-xs-6
+    %br
+    %br
+    %p= @data_feed.price
+    %hr
 
-= link_to 'Edit', edit_data_feed_path(@data_feed)
-\|
-= link_to 'Back', data_feeds_path
+    %p= @data_feed.description
+    %hr
+
+    %p= link_to @data_feed.target_url, @data_feed.target_url, target: "_blank" 
+    %hr
+    %p= @data_feed.date_created
+    %hr
+    %p= @data_feed.date_modified

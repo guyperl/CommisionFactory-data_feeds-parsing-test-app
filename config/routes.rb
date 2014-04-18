@@ -7,5 +7,9 @@ CFDFT::Application.routes.draw do
   ActiveAdmin.routes(self)
   devise_for :users
 
+  resources :data_feeds do
+    collection { post :search, to: 'data_feeds#index' }
+  end
+
   root 'merchants#index'
 end

@@ -1,8 +1,36 @@
 .container.item_name
   .row
     .col-xs-12
-      %p.text-center Search Data Feeds
-
+      %p.text-center Products
+%br
+.container.main_content
+  .row
+    = search_form_for @q, url: search_data_feeds_path, method: :post do |f|
+      .col-xs-6
+        = f.text_field :name_or_barnd_cont, :placeholder => "Enter product name"
+      .col-xs-4
+        %select.form-control{name: "AmazonSearchIndex"}
+          %option{value: "Apparel"} Apparel
+          %option{value: "Automotive"} Automotive
+          %option{value: "Books"} Books
+          %option{value: "DVD"} DVD
+          %option{value: "Electronics"} Electronics
+          %option{value: "GourmetFood"} GourmetFood
+          %option{value: "Grocery"} Grocery
+          %option{value: "HealthPersonalCare"} HealthPersonalCare
+          %option{value: "HomeGarden"} HomeGarden
+          %option{value: "Kitchen"} Kitchen
+          %option{value: "Music"} Music
+          %option{value: "PCHardware"} PCHardware
+          %option{value: "Shoes"} Shoes
+          %option{value: "Software"} Software
+          %option{value: "SportingGoods"} SportingGoods
+          %option{value: "Tools"} Tools
+          %option{value: "Toys"} Toys
+          %option{value: "VHS"} VHS
+          %option{value: "VideoGames"} VideoGames
+      .col-xs-2
+        = f.submit "Search"
 .container
   %table.table
     %tr
@@ -27,7 +55,11 @@
             = "#{data_feed.barnd}. #{data_feed.name}"
 
         %td= truncate( data_feed.description, length: 30 )
-        %td= truncate( data_feed.target_url, length: 30 )
+        %td
+          = link_to data_feed.target_url, target: "_blank" do
+            = truncate( data_feed.target_url, length: 30 )
         %td= data_feed.date_created
         %td= data_feed.date_modified
   = paginate @data_feeds
+
+

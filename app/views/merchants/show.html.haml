@@ -1,1 +1,37 @@
-= link_to 'Back', merchants_path
+.container.item_name
+  .row
+    .col-xs-12
+      %p.text-center Products
+%br
+.container
+  %table.table
+    %tr
+      %th Image
+      %th Price
+      %th Feed
+      %th Description
+      %th Target URL
+      %th Created At
+      %th Updated AT
+
+    - @data_feeds.each do |data_feed|
+      %tr
+        %td
+          = link_to data_feed do 
+            = image_tag data_feed.avatar_url
+
+        %td= data_feed.price
+
+        %td
+          = link_to data_feed do 
+            = "#{data_feed.barnd}. #{data_feed.name}"
+
+        %td= truncate( data_feed.description, length: 30 )
+        %td
+          = link_to data_feed.target_url, target: "_blank" do
+            = truncate( data_feed.target_url, length: 30 )
+        %td= data_feed.date_created
+        %td= data_feed.date_modified
+  = paginate @data_feeds
+
+
