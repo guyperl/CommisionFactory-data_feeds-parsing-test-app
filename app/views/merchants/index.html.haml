@@ -1,29 +1,12 @@
-%h1 Listing merchants
+.container.item_name
+  .row
+    .col-xs-12
+      %p.text-center Select Merchant
 
-%table
-  %tr
-    %th Merchant
-    %th Date created
-    %th Date modified
-    %th Name
-    %th Avatar path
-    %th Items count
-    %th
-    %th
-    %th
+.container
+  .row
+    - @merchants.each do |merchant|
+      .col-xs-4.merchant-avatar
+        = link_to merchant do
+          = image_tag merchant.avatar_path
 
-  - @merchants.each do |merchant|
-    %tr
-      %td= merchant.merchant_id
-      %td= merchant.date_created
-      %td= merchant.date_modified
-      %td= merchant.name
-      %td= merchant.avatar_path
-      %td= merchant.items_count
-      %td= link_to 'Show', merchant
-      %td= link_to 'Edit', edit_merchant_path(merchant)
-      %td= link_to 'Destroy', merchant, :method => :delete, :data => { :confirm => 'Are you sure?' }
-
-%br
-
-= link_to 'New Merchant', new_merchant_path
