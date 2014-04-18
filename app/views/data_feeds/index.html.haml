@@ -1,49 +1,33 @@
-%h1 Listing data_feeds
+.container.item_name
+  .row
+    .col-xs-12
+      %p.text-center Search Data Feeds
 
-%table
-  %tr
-    %th Merchant
-    %th Product
-    %th Date created
-    %th Date modified
-    %th Sku
-    %th Name
-    %th Category
-    %th Description
-    %th Target url
-    %th Image url
-    %th Avatar url
-    %th Price
-    %th Barnd
-    %th Colour
-    %th Currency
-    %th Gender
-    %th
-    %th
-    %th
-
-  - @data_feeds.each do |data_feed|
+.container
+  %table.table
     %tr
-      %td= data_feed.merchant_id
-      %td= data_feed.product_id
-      %td= data_feed.date_created
-      %td= data_feed.date_modified
-      %td= data_feed.sku
-      %td= data_feed.name
-      %td= data_feed.category
-      %td= data_feed.description
-      %td= data_feed.target_url
-      %td= data_feed.image_url
-      %td= data_feed.avatar_url
-      %td= data_feed.price
-      %td= data_feed.barnd
-      %td= data_feed.colour
-      %td= data_feed.currency
-      %td= data_feed.gender
-      %td= link_to 'Show', data_feed
-      %td= link_to 'Edit', edit_data_feed_path(data_feed)
-      %td= link_to 'Destroy', data_feed, :method => :delete, :data => { :confirm => 'Are you sure?' }
+      %th Image
+      %th Price
+      %th Feed
+      %th Description
+      %th Target URL
+      %th Created At
+      %th Updated AT
 
-%br
+    - @data_feeds.each do |data_feed|
+      %tr
+        %td
+          = link_to data_feed do 
+            = image_tag data_feed.avatar_url
 
-= link_to 'New Data feed', new_data_feed_path
+        %td= data_feed.price
+
+        %td
+          = link_to data_feed do 
+            = "#{data_feed.barnd}. #{data_feed.name}"
+
+        %td= truncate( data_feed.description, length: 30 )
+        %td= truncate( data_feed.target_url, length: 30 )
+        %td= data_feed.date_created
+        %td= data_feed.date_modified
+  = paginate @data_feeds

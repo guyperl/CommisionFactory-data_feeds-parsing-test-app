@@ -1,5 +1,5 @@
 CFDFT::Application.routes.draw do
-  resources :data_feeds
+  resources :data_feeds, only: [:index, :show]
 
   resources :merchants, only: [:index, :show]
 
