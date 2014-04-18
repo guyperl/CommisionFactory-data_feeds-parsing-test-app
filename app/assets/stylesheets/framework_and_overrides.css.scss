@@ -20,6 +20,17 @@ img {
 // THESE ARE EXAMPLES YOU CAN MODIFY
 // create your own classes
 // to make views framework-neutral
+.merchant-avatar{
+  padding: 10px;
+  height: 200px;
+  img{
+    height: 180px;
+  }
+
+}
+.navbar-inverse{
+  border-radius: 0 !important;
+}
 .column {
   @extend .col-md-6;
   @extend .text-center;

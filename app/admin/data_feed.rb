@@ -1,7 +1,7 @@
 ActiveAdmin.register DataFeed do
 
   action_item do
-    link_to 'Import Merchants', import_data_feeds_admin_data_feeds_path
+    link_to 'Import DataFeed', import_data_feeds_admin_data_feeds_path
   end
 
   index do
@@ -33,7 +33,7 @@ ActiveAdmin.register DataFeed do
     [ Merchant.first ].each do |merchant|
       Feedster.new().get_data_feeds(merchant.merchant_id).map do |data_feed| 
 
-        feed = DataFeed.find_or_initialize_by(name: data_feed['Name'])
+        feed = DataFeed.find_or_initialize_by(sku: data_feed['SKU'], price: data_feed['Price'])
 
         feed.update({
           :product_id    => data_feed['Id'],
