@@ -1,0 +1,23 @@
+= simple_form_for(@data_feed) do |f|
+  = f.error_notification
+
+  .form-inputs
+    = f.input :merchant_id
+    = f.input :product_id
+    = f.input :date_created
+    = f.input :date_modified
+    = f.input :sku
+    = f.input :name
+    = f.input :category
+    = f.input :description
+    = f.input :target_url
+    = f.input :image_url
+    = f.input :avatar_url
+    = f.input :price
+    = f.input :barnd
+    = f.input :colour
+    = f.input :currency
+    = f.input :gender
+
+  .form-actions
+    = f.button :submit

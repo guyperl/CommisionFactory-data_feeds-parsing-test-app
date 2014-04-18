@@ -39,6 +39,8 @@ GEM
       activemodel (= 4.1.0)
       activesupport (= 4.1.0)
       arel (~> 5.0.0)
+    activerecord-import (0.5.0)
+      activerecord (>= 3.0)
     activesupport (4.1.0)
       i18n (~> 0.6, >= 0.6.9)
       json (~> 1.7, >= 1.7.7)
@@ -225,6 +227,7 @@ PLATFORMS
 
 DEPENDENCIES
   activeadmin!
+  activerecord-import
   better_errors
   binding_of_caller
   bootstrap-sass
