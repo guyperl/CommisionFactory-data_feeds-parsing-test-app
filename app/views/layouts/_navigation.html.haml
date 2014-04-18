@@ -1,13 +1,16 @@
--# navigation styled for Bootstrap 3.0
-%nav.navbar.navbar-default.navbar-fixed-top
-  .container
-    .navbar-header
-      %button.navbar-toggle{"data-target" => ".navbar-collapse", "data-toggle" => "collapse", :type => "button"}
-        %span.sr-only Toggle navigation
-        %span.icon-bar
-        %span.icon-bar
-        %span.icon-bar
-      = link_to 'Home', root_path, class: 'navbar-brand'
-    .collapse.navbar-collapse
-      %ul.nav.navbar-nav
-        = render 'layouts/navigation_links'
+%nav.navbar.navbar-inverse{role: "navigation"}
+  .navbar-header
+    %button.navbar-toggle{"data-target" => "#navbarCollapse", "data-toggle" => "collapse", type: "button"}
+      %span.icon-bar
+      %span.icon-bar
+      %span.icon-bar
+    %a.navbar-brand{href: "/"} Foenix
+  #navbarCollapse.collapse.navbar-collapse
+    %ul.nav.navbar-nav
+    %ul.nav.navbar-nav.navbar-right
+      %li.dropdown
+        %a.dropdown-toggle{"data-toggle" => "dropdown", href: "#"}
+          Menu
+          %b.caret
+        %ul.dropdown-menu{role: "menu"}
+          = render 'layouts/navigation_links'
