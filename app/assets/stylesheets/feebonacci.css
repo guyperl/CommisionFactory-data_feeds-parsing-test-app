@@ -1,0 +1,130 @@
+main {
+  background-color: white !important;
+}
+.container {
+  width: 1024px; }
+
+.logo {
+  margin-top: 70px; }
+  .logo a img {
+    margin: 0 auto;
+    display: block; }
+
+.menu ul {
+  border-bottom: 1px solid #adadad;
+  padding-left: 0px;
+  line-height: 40px;
+  margin-top: 20px; }
+  .menu ul li {
+    list-style: none;
+    float: left;
+    margin-right: 11px; }
+    .menu ul li a {
+      color: #adadad;
+      font-size: 21px; }
+    .menu ul li a:hover {
+      text-decoration: none;
+      color: #8b8b8b; }
+  .menu ul li:nth-child(9) {
+    margin-right: 0px; }
+
+.title h1 {
+  font-size: 20px; }
+
+.item_name {
+  margin-top: 22px; }
+  .item_name .row {
+    background-color: black; }
+    .item_name .row p {
+      font-size: 26px;
+      line-height: 55px;
+      margin-bottom: 0px;
+      color: #adadad; }
+
+.main_content {
+  margin-bottom: 70px; }
+  .main_content .photo_container {
+    width: 100%;
+    height: 300px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center center;
+    margin-top: 50px; }
+  .main_content .small_photo_container {
+    width: 33.33%;
+    height: 100px;
+    float: left;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center center;
+    float: left;
+    margin-top: 40px;
+    cursor: pointer; }
+  .main_content .prices .product_name {
+    font-weight: bold;
+    font-size: 16px;
+    text-transform: uppercase;
+    margin-top: 15px; }
+  .main_content .prices .description {
+    color: #adadad;
+    text-transform: lowercase; }
+  .main_content .prices .price_button {
+    width: 100%;
+    height: 40px;
+    border-radius: 8px;
+    border: none;
+    display: block;
+    margin-bottom: 6px; }
+    .main_content .prices .price_button .item_price {
+      float: left;
+      margin-left: 14px;
+      color: #ffffff;
+      margin-top: -1px;
+      font-weight: bold;
+      font-size: 29px; }
+    .main_content .prices .price_button .site_address {
+      color: #ffffff;
+      font-size: 16px;
+      float: left;
+      margin-left: 20px;
+      line-height: 35px; }
+  .main_content .prices .price_button.fiolet {
+    background-color: rgba(49, 56, 87, 0.9); }
+  .main_content .prices .price_button.fiolet:hover {
+    background-color: #313857; }
+  .main_content .prices .price_button.coffee {
+    background-color: rgba(189, 179, 157, 0.9); }
+  .main_content .prices .price_button.coffee:hover {
+    background-color: #bdb39d; }
+  .main_content .prices .price_button.black {
+    background-color: rgba(7, 18, 19, 0.9); }
+  .main_content .prices .price_button.black:hover {
+    background-color: #071213; }
+  .main_content .prices .price_button.green {
+    background-color: rgba(56, 112, 60, 0.9); }
+  .main_content .prices .price_button.green:hover {
+    background-color: #38703c; }
+  .main_content .prices .price_button.orange_cold {
+    background-color: rgba(180, 113, 48, 0.9); }
+  .main_content .prices .price_button.orange_cold:hover {
+    background-color: #b47130; }
+  .main_content .prices .price_button.orange_warm {
+    background-color: rgba(192, 78, 45, 0.9); }
+  .main_content .prices .price_button.orange_warm:hover {
+    background-color: #c04e2d; }
+  .main_content .prices .price_button.blue {
+    background-color: rgba(43, 103, 162, 0.9); }
+  .main_content .prices .price_button.blue:hover {
+    background-color: #2b67a2; }
+  .main_content .prices .price_button.search {
+    background-color: rgba(184, 200, 55, 0.9);
+    text-align: center;
+    line-height: 36px; }
+    .main_content .prices .price_button.search span {
+      color: #ffffff;
+      font-size: 16px; }
+  .main_content .prices .price_button.search:hover {
+    background-color: #b8c837;
+    text-decoration: none; }
+  .main_content .prices .price_button:focus {
+    outline: none; }

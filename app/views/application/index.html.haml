@@ -1,0 +1,59 @@
+.container.logo
+  .row
+    .col-xs-4.col-xs-offset-4
+      %a{href: "/"}
+        %img{alt: "", src: "assets/logo.png"}
+.container.menu
+  .row
+    .col-xs-12
+      %ul
+        %li
+          %a{href: "/"} Product Page
+        %li
+          %a{href: "/"} Product Search
+        %li
+          %a{href: "/"} Commission Factory
+        %br{style: "clear: both"}
+.container.title
+  .row
+    .col-xs-6.col-xs-offset-3
+      %h1 WORLD'S PREMIER ONLINE FASHION DIRECTORY
+.container.item_name
+  .row
+    .col-xs-12
+      %p Ebay and Amazon Product Search
+.container.main_content
+  .row
+    %form{action: "", method: "post"}
+      %table.table.table-hover
+        %tr
+          %th Query
+          %th Amazon Search Index
+          %th
+        %tr
+          %td
+            %input.form-control{name: "Query", placeholder: "ANNE OMBRE STRIPE FLARE DRESS", size: "40", type: "text", value: ""}
+          %td
+            %select.form-control{name: "AmazonSearchIndex"}
+              %option{value: "Apparel"} Apparel
+              %option{value: "Automotive"} Automotive
+              %option{value: "Books"} Books
+              %option{value: "DVD"} DVD
+              %option{value: "Electronics"} Electronics
+              %option{value: "GourmetFood"} GourmetFood
+              %option{value: "Grocery"} Grocery
+              %option{value: "HealthPersonalCare"} HealthPersonalCare
+              %option{value: "HomeGarden"} HomeGarden
+              %option{value: "Kitchen"} Kitchen
+              %option{value: "Music"} Music
+              %option{value: "PCHardware"} PCHardware
+              %option{value: "Shoes"} Shoes
+              %option{value: "Software"} Software
+              %option{value: "SportingGoods"} SportingGoods
+              %option{value: "Tools"} Tools
+              %option{value: "Toys"} Toys
+              %option{value: "VHS"} VHS
+              %option{value: "VideoGames"} VideoGames
+          %td{align: "center", colspan: "2"}
+            %input.btn.btn-primary{name: "submit", type: "submit", value: "Search"}
+    %br{style: "clear: both"}
