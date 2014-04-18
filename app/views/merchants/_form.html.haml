@@ -1,0 +1,13 @@
+= simple_form_for(@merchant) do |f|
+  = f.error_notification
+
+  .form-inputs
+    = f.input :merchant_id
+    = f.input :date_created
+    = f.input :date_modified
+    = f.input :name
+    = f.input :avatar_path
+    = f.input :items_count
+
+  .form-actions
+    = f.button :submit

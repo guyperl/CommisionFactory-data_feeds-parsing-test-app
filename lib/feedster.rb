@@ -38,7 +38,6 @@ class Feedster
   #
   def build_uri_for(provider, args={})
     args = args.inject('?'){ |res, hash| res += "#{hash[0]}=#{hash[1]}&" }
-    p args
     case provider
     when 'CF'
       URI.parse("https://api.commissionfactory.com.au/V1/Affiliate/DataFeeds/#{args}apiKey=7fec5f11e26a493a8360175035c0014e")

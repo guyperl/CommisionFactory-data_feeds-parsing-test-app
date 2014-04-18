@@ -1,140 +1,104 @@
-Cfdft
-=========
+Merchants
+---------
+#
+# This is what we receive from CommisionFactory
+#
+{
+  "Id":388,
+  "DateCreated":"2011-07-18T16:44:42.663",
+  "DateModified":"2014-04-17T21:46:41.68",
+  "MerchantId":388,
+  "MerchantName":"Styletread (AU)",
+  "MerchantAvatarUrl":"http://content.commissionfactory.com.au/Avatars/3F6CDC4B-E92F-49E5-889C-DF194174653E.png",
+  "Name":"Style Tread CSV Product Feed",
+  "Type":"Product Catalogue",
+  "ItemsCount":3237,
+  "Items":null},
+}
 
-This application was generated with the [rails_apps_composer](https://github.com/RailsApps/rails_apps_composer) gem
-provided by the [RailsApps Project](http://railsapps.github.io/).
+#
+# This part we will store in DB
+#
+MerchantId        => merchant_id:integer 
+DateCreated       => date_created:date 
+DateModified      => date_modified:date 
+MerchantName      => name:string 
+MerchantAvatarUrl => avatar_path:text 
+ItemsCount        => items_count:integer
 
-Diagnostics
------------
 
-This application was built with recipes that are NOT known to work together.
+DataFeeds
+---------
+#
+# This is what we receive from CommisionFactory
+#
+{
+  "Id": 1,
+  "DateCreated": "2000-01-01T00:00:00.000",
+  "DateModified": "2000-01-01T00:00:00.000",
+  "SKU": "P0001",
+  "Name": "100 Piece Puzzle",
+  "Category": "Puzzles",
+  "Description": "A puzzle featuring a picture of a puppy.",
+  "TargetUrl": "http://www.example.com/",
+  "ImageUrl": "http://content.commissionfactory.com.au/Products/0/1.jpg",
+  "Image50Url": "http://content.commissionfactory.com.au/Products/0/1@50x50.jpg",
+  "Image100Url": "http://content.commissionfactory.com.au/Products/0/1@100x100.jpg",
+  "Image120Url": "http://content.commissionfactory.com.au/Products/0/1@120x120.jpg",
+  "Image200Url": "http://content.commissionfactory.com.au/Products/0/1@200x200.jpg",
+  "Image300Url": "http://content.commissionfactory.com.au/Products/0/1@300x300.jpg",
+  "Image400Url": "http://content.commissionfactory.com.au/Products/0/1@400x400.jpg",
+  "Price": "$10",
+  "Brand": null,
+  "Colour": null,
+  "ContentRating": null,
+  "Currency": null,
+  "DeliveryCost": null,
+  "DeliveryTime": null,
+  "Features": null,
+  "Gender": null,
+  "Genre": null,
+  "Keywords": null,
+  "ModelNumber": null,
+  "Platform": null,
+  "PriceRrp": null,
+  "PriceSale": null,
+  "PromoText": null,
+  "Size": null,
+  "StockLevel": null,
+  "SubCategory": null,
+  "Custom1": null,
+  "Custom2": null,
+  "Custom3": null,
+  "Custom4": null,
+  "TrackingUrl": "https://track.commissionfactory.com.au/p/0/1/",
+  "TrackingCode": "<a href=\"https://track.commissionfactory.com.au/p/0/1/\" rel=\"noindex,nofollow\">100 Piece Puzzle</a>"
+}
 
-This application was built with preferences that are NOT known to work
-together.
+#
+# This is what we gonna store
+#
+Id             => product_id:integer
+DateCreated    => date_created:date
+DateModified   => date_modified:date
+SKU            => sku:string
+Name           => name:string
+Category       => category:string
+Description    => description:text
+TargetUrl      => target_url:text
+ImageUrl       => image_url:text
+Image200Url    => avatar_url:text
+Price          => price:integer
+Brand          => barnd:string
+Colour         => colour:string
+Currency       => currency:string
+Gender         => gender:string
 
-If the application doesn’t work as expected, please [report an issue](https://github.com/RailsApps/rails_apps_composer/issues)
-and include these diagnostics:
 
-We’d also like to know if you’ve found combinations of recipes or
-preferences that do work together.
-
-Recipes:
-
-* apps4
-* controllers
-* core
-* deployment
-* email
-* extras
-* frontend
-* gems
-* git
-* init
-* models
-* prelaunch
-* railsapps
-* readme
-* routes
-* saas
-* setup
-* testing
-* views
-
-Preferences:
-
-* git: true
-* apps4: none
-* dev_webserver: thin
-* prod_webserver: thin
-* database: postgresql
-* templates: haml
-* unit_test: rspec
-* integration: none
-* continuous_testing: none
-* fixtures: none
-* frontend: bootstrap3
-* email: gmail
-* authentication: devise
-* devise_modules: confirmable
-* authorization: none
-* form_builder: simple_form
-* starter_app: home_app
-* rvmrc: false
-* better_errors: true
-* ban_spiders: true
-
-Ruby on Rails
--------------
-
-This application requires:
-
--   Ruby
--   Rails
-
-Learn more about [Installing Rails](http://railsapps.github.io/installing-rails.html).
-
-Database
---------
-
-This application uses PostgreSQL with ActiveRecord.
-
-Development
------------
-
--   Template Engine: Haml
--   Testing Framework: RSpec
--   Front-end Framework: Bootstrap 3.0 (Sass)
--   Form Builder: SimpleForm
--   Authentication: Devise
--   Authorization: None
--   Admin: None
-
-Email
------
-
-The application is configured to send email using a Gmail account.
-
-Email delivery is disabled in development.
-
-Getting Started
+Database import
 ---------------
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-
-Documentation and Support
--------------------------
-
-This is the only documentation.
-
-#### Issues
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-
-Similar Projects
-----------------
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-
-Contributing
-------------
-
-If you make improvements to this application, please share with others.
-
--   Fork the project on GitHub.
--   Make your feature addition or bug fix.
--   Commit with Git.
--   Send the author a pull request.
-
-If you add functionality to this application, create an alternative
-implementation, or build an application that is similar, please contact
-me and I’ll add a note to the README so that others can find your work.
-
-Credits
--------
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-
-License
--------
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+#
+# We are using activerecord-import gem for this. 
+# https://github.com/zdennis/activerecord-import
+#
+Merchant.import([Merchant.new(name: :name), Merchant.new(name: :name)])
